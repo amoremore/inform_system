@@ -34,6 +34,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.user = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.atten = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -53,12 +55,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(20)))));
-            this.button1.Location = new System.Drawing.Point(35, 132);
+            this.button1.Location = new System.Drawing.Point(35, 200);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 34);
             this.button1.TabIndex = 20;
             this.button1.Text = "Login In";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -100,27 +103,59 @@
             // 
             this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
+            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.GhostWhite;
+            this.bunifuMaterialTextbox1.HintText = "password";
             this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(35, 66);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(35, 131);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
             this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(226, 44);
             this.bunifuMaterialTextbox1.TabIndex = 24;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // user
+            // 
+            this.user.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.user.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.user.ForeColor = System.Drawing.Color.White;
+            this.user.HintForeColor = System.Drawing.Color.GhostWhite;
+            this.user.HintText = "username";
+            this.user.isPassword = false;
+            this.user.LineFocusedColor = System.Drawing.Color.DeepSkyBlue;
+            this.user.LineIdleColor = System.Drawing.Color.White;
+            this.user.LineMouseHoverColor = System.Drawing.Color.DeepSkyBlue;
+            this.user.LineThickness = 3;
+            this.user.Location = new System.Drawing.Point(35, 75);
+            this.user.Margin = new System.Windows.Forms.Padding(4);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(226, 44);
+            this.user.TabIndex = 25;
+            this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // atten
+            // 
+            this.atten.AutoSize = true;
+            this.atten.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.atten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.atten.Location = new System.Drawing.Point(40, 123);
+            this.atten.Name = "atten";
+            this.atten.Size = new System.Drawing.Size(199, 17);
+            this.atten.TabIndex = 26;
+            this.atten.Text = "Такого логина не существует";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(294, 188);
+            this.ClientSize = new System.Drawing.Size(294, 276);
+            this.Controls.Add(this.atten);
+            this.Controls.Add(this.user);
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -131,6 +166,7 @@
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +180,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox user;
+        private System.Windows.Forms.Label atten;
     }
 }

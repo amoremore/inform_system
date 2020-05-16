@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.Login = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.password = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,41 +39,42 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Sing = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.wrongdata = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // bunifuMetroTextbox1
+            // Login
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.LavenderBlush;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Lavender;
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(58, 140);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(286, 36);
-            this.bunifuMetroTextbox1.TabIndex = 1;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Login.BorderColorFocused = System.Drawing.Color.LavenderBlush;
+            this.Login.BorderColorIdle = System.Drawing.Color.White;
+            this.Login.BorderColorMouseHover = System.Drawing.Color.Lavender;
+            this.Login.BorderThickness = 1;
+            this.Login.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Login.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Login.ForeColor = System.Drawing.Color.White;
+            this.Login.isPassword = false;
+            this.Login.Location = new System.Drawing.Point(58, 140);
+            this.Login.Margin = new System.Windows.Forms.Padding(2);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(286, 36);
+            this.Login.TabIndex = 1;
+            this.Login.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMetroTextbox2
+            // password
             // 
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.LavenderBlush;
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.White;
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Lavender;
-            this.bunifuMetroTextbox2.BorderThickness = 1;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox2.isPassword = true;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(58, 218);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(286, 36);
-            this.bunifuMetroTextbox2.TabIndex = 2;
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.password.BorderColorFocused = System.Drawing.Color.LavenderBlush;
+            this.password.BorderColorIdle = System.Drawing.Color.White;
+            this.password.BorderColorMouseHover = System.Drawing.Color.Lavender;
+            this.password.BorderThickness = 1;
+            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.password.ForeColor = System.Drawing.Color.White;
+            this.password.isPassword = true;
+            this.password.Location = new System.Drawing.Point(58, 218);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(286, 36);
+            this.password.TabIndex = 2;
+            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label1
             // 
@@ -189,12 +190,24 @@
             this.linkLabel2.Text = "Login in as admin";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // wrongdata
+            // 
+            this.wrongdata.AutoSize = true;
+            this.wrongdata.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wrongdata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.wrongdata.Location = new System.Drawing.Point(60, 179);
+            this.wrongdata.Name = "wrongdata";
+            this.wrongdata.Size = new System.Drawing.Size(194, 17);
+            this.wrongdata.TabIndex = 13;
+            this.wrongdata.Text = "Логин или пароль неверный";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(400, 424);
+            this.Controls.Add(this.wrongdata);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.Sing);
             this.Controls.Add(this.button1);
@@ -204,12 +217,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuMetroTextbox2);
-            this.Controls.Add(this.bunifuMetroTextbox1);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,8 +231,8 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        private Bunifu.Framework.UI.BunifuMetroTextbox Login;
+        private Bunifu.Framework.UI.BunifuMetroTextbox password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -228,6 +242,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel Sing;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label wrongdata;
     }
 }
 

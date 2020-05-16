@@ -39,17 +39,35 @@ namespace Inf_sys_geogr_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Main_user main_User = new Main_user(this);
-            this.Hide();
-            main_User.Show();
+ 
+          informsysEntities context = new informsysEntities();
+          Users users = context.Users.Where(p => p.username == Login.Text).FirstOrDefault();
+          wrongdata.Visible = false;
+      
+            if (users == null)
+            {
+                wrongdata.Visible = true;
+            }
+
+            else if (users.passwordd == password.Text)
+            {
+                Main_user main_User = new Main_user(this);
+                this.Hide();
+                main_User.Show();
+            }
+            else { wrongdata.Visible = true; }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Admin admin = new Admin(this);
             this.Hide();
-            admin.Show();
-            
+            admin.Show();    
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            wrongdata.Visible = false;
         }
     }
 }

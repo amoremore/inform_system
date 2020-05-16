@@ -35,5 +35,42 @@ namespace Inf_sys_geogr_
             this.Close();
             Form1.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            informsysEntities context = new informsysEntities();
+            Users users = context.Users.Where(p => p.username == login.Text).FirstOrDefault();
+            Users emaill = context.Users.Where(p => p.Email == email.Text).FirstOrDefault();
+            if (users == null)
+            {
+                if (emaill == null)
+                {
+                    Users newusers = new Users();
+                    newusers.username = login.Text;
+                    newusers.Email = email.Text;
+                    newusers.passwordd = password.Text;
+                    if (password.Text == confirmpass.Text)
+                    {
+                        context.Users.Add(newusers);
+                        context.SaveChanges();
+                        this.Close();
+                        Form1.Show();
+                    }
+                    else { attention.Visible = true; }
+                      
+                }
+                else { busy2.Visible = true; }
+
+            }
+            else { busy.Visible = true; }
+            
+        }
+
+        private void Sing_Up_Load(object sender, EventArgs e)
+        {
+            busy.Visible = false;
+            busy2.Visible = false;
+            attention.Visible = false;
+        }
     }
 }

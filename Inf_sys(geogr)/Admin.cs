@@ -35,5 +35,27 @@ namespace Inf_sys_geogr_
             this.Close();
             Form1.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            informsysEntities context = new informsysEntities();
+            Admins admins = context.Admins.Where(p => p.username == user.Text).FirstOrDefault();
+            if (admins == null)
+            {
+                atten.Visible = true;
+            }
+            else
+            {
+                this.Close();
+                adminMain adminMain = new adminMain();
+                adminMain.Show();
+            }
+            
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            atten.Visible = false;
+        }
     }
 }
