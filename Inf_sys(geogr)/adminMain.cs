@@ -12,11 +12,26 @@ namespace Inf_sys_geogr_
 {
     public partial class adminMain : Form
     {
-        
-        public adminMain()
+        Form1 Form1;
+        public adminMain(Form1 form1)
         {
             InitializeComponent();
-            
+            this.Form1 = form1;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void adminMain_Load(object sender, EventArgs e)
+        {
+            web.Navigate("file:///D:/Inform_system(geography)/Inf_sys(geogr)/html%20files/Main.html");
             
         }
     }

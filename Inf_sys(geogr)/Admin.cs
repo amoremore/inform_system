@@ -40,17 +40,14 @@ namespace Inf_sys_geogr_
         {
             informsysEntities context = new informsysEntities();
             Admins admins = context.Admins.Where(p => p.username == user.Text).FirstOrDefault();
-            if (admins == null)
-            {
-                atten.Visible = true;
-            }
-            else
+            if (admins != null && admins.passwords == password.Text)
             {
                 this.Close();
-                adminMain adminMain = new adminMain();
+                adminMain adminMain = new adminMain(Form1);
                 adminMain.Show();
             }
-            
+            else { atten.Visible = true; }
+
         }
 
         private void Admin_Load(object sender, EventArgs e)

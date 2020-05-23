@@ -33,7 +33,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.user = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.atten = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -99,24 +99,24 @@
             this.label8.Text = "<";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // bunifuMaterialTextbox1
+            // password
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.GhostWhite;
-            this.bunifuMaterialTextbox1.HintText = "password";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(35, 131);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(226, 44);
-            this.bunifuMaterialTextbox1.TabIndex = 24;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.password.ForeColor = System.Drawing.Color.White;
+            this.password.HintForeColor = System.Drawing.Color.GhostWhite;
+            this.password.HintText = "password";
+            this.password.isPassword = true;
+            this.password.LineFocusedColor = System.Drawing.Color.DeepSkyBlue;
+            this.password.LineIdleColor = System.Drawing.Color.White;
+            this.password.LineMouseHoverColor = System.Drawing.Color.DeepSkyBlue;
+            this.password.LineThickness = 3;
+            this.password.Location = new System.Drawing.Point(35, 131);
+            this.password.Margin = new System.Windows.Forms.Padding(4);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(226, 44);
+            this.password.TabIndex = 24;
+            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // user
             // 
@@ -144,9 +144,9 @@
             this.atten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.atten.Location = new System.Drawing.Point(40, 123);
             this.atten.Name = "atten";
-            this.atten.Size = new System.Drawing.Size(199, 17);
+            this.atten.Size = new System.Drawing.Size(193, 17);
             this.atten.TabIndex = 26;
-            this.atten.Text = "Такого логина не существует";
+            this.atten.Text = "Неверный логин или пароль";
             // 
             // Admin
             // 
@@ -156,7 +156,7 @@
             this.ClientSize = new System.Drawing.Size(294, 276);
             this.Controls.Add(this.atten);
             this.Controls.Add(this.user);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -179,7 +179,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox password;
         private Bunifu.Framework.UI.BunifuMaterialTextbox user;
         private System.Windows.Forms.Label atten;
     }

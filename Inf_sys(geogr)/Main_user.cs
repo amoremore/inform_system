@@ -12,11 +12,26 @@ namespace Inf_sys_geogr_
 {
     public partial class Main_user : Form
     {
-        Form1 Form1;
-        public Main_user(Form1 form1)
+        
+        public Main_user()
         {
             InitializeComponent();
-            this.Form1 = form1;
+            
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void Main_user_Load(object sender, EventArgs e)
+        {
+            web.Navigate("file:///D:/Inform_system(geography)/Inf_sys(geogr)/html%20files/Main.html");
         }
     }
 }

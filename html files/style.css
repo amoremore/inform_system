@@ -1,0 +1,40 @@
+*{
+	box-sizing: border-box;
+	margin: 2px;	
+}
+
+body{
+ background-color: #6fa397;
+}
+
+
+.heading{
+background: #232038; /* Цвет фона */
+color: #f0f0f0; /* Цвет текста */ 
+padding: 10px; /* Поля вокруг текста */
+border-radius: 15px; /* Уголки */
+text-align: center;
+}
+
+li{
+	list-style-type: none;
+}
+ 
+.themes{
+	margin: 10px;
+	text-align: center;
+}
+
+
+.center{
+    margin-top: 10px;
+	max-width: 400px;
+	font-size: 20px;
+	margin: 0 auto;
+	
+}	
+
+a{
+	color: #65498a;
+}
+
