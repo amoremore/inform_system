@@ -1,0 +1,50 @@
+*{
+	box-sizing: border-box;
+
+}
+
+.heading{
+  text-align: center;
+}
+
+.image{
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-top: 20px;
+
+}
+.response-table{
+	text-align: center;
+
+}
+
+
+.kurs{
+	background: #9da2a3;
+
+}
+
+.res{
+	border: 1px solid black;
+}
+
+.colors{
+	background: #91adb5;
+}
+
+.article-important{
+ background-color: #fdf9cc;
+ border: 1px solid #f7cfb3;
+ padding: 10px 0px 2px;
+ display: inline-flex;
+ align-items: center;
+ width: 100%;
+ margin: 10px 0;
+}
+
+p{
+line-height: 2;
+font-family: 'Times New Roman';
+}
+
