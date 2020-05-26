@@ -43,7 +43,7 @@ namespace Inf_sys_geogr_
             if (admins != null && admins.passwords == password.Text)
             {
                 this.Close();
-                adminMain adminMain = new adminMain(Form1);
+                adminMain adminMain = new adminMain();
                 adminMain.Show();
             }
             else { atten.Visible = true; }

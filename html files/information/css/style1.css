@@ -5,6 +5,7 @@
 
 .heading{
   text-align: center;
+  color: #6050cc; 
 }
 
 .image{
@@ -36,15 +37,51 @@
 .article-important{
  background-color: #fdf9cc;
  border: 1px solid #f7cfb3;
- padding: 10px 0px 2px;
- display: inline-flex;
- align-items: center;
- width: 100%;
+ padding: 2px;
  margin: 10px 0;
+ width: 100%;
+ align-items: center;
+ display: inline-flex;
+ 
+
+
+
+ /*width: 100%;
+ margin: 10px 0;
+ display: inline-flex;
+ align-items: center;*/
 }
 
 p{
 line-height: 2;
-font-family: 'Times New Roman';
+
 }
 
+body{
+	font-family: 'Verdana';
+	font-size: 14px;
+}
+
+h2{
+	/*color: #cc5050;*/
+	color: #6050cc;
+}
+
+
+.row{
+   padding-bottom: 6px;
+}
+
+.ramka{
+	border:3px #7a79c9  dashed; 
+	width: 100%;
+	padding: 7px;
+	line-height: 2;
+	font-family: 'Verdana';
+
+
+}
+
+.cen{
+	text-align: center;
+}

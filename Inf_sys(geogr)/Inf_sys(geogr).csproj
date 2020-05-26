@@ -109,6 +109,12 @@
     <Compile Include="Sing_Up.Designer.cs">
       <DependentUpon>Sing_Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests.Designer.cs">
+      <DependentUpon>Tests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="Sing_Up.resx">
       <DependentUpon>Sing_Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests.resx">
+      <DependentUpon>Tests.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -12,11 +12,11 @@ namespace Inf_sys_geogr_
 {
     public partial class adminMain : Form
     {
-        Form1 Form1;
-        public adminMain(Form1 form1)
+        
+        public adminMain()
         {
             InitializeComponent();
-            this.Form1 = form1;
+            
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
