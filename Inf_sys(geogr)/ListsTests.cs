@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace Inf_sys_geogr_
 {
-    public partial class Tests : Form
+    public partial class ListsTests : Form
     {
+        public int Selectedtest;
         Main_user main_User;
-        public Tests(Main_user main_User)
+        public ListsTests(Main_user main_User)
         {
             InitializeComponent();
             this.main_User = main_User;
@@ -30,8 +31,12 @@ namespace Inf_sys_geogr_
             WindowState = FormWindowState.Minimized;
         }
 
-        private void bunifuFlatButton17_Click(object sender, EventArgs e)
+        private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
+            FinalTests finalTests = new FinalTests(this);
+            Selectedtest = 1;
+            this.Hide();
+            finalTests.Show();
 
         }
     }

@@ -36,10 +36,9 @@ namespace Inf_sys_geogr_
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-             Tests tests = new Tests(this);
-             this.Hide();
-             tests.Show();
-            
+            ListsTests listsTests = new ListsTests(this);
+            this.Hide();
+            listsTests.Show();   
         }
     }
 }
