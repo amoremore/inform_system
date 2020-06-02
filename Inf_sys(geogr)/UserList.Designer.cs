@@ -50,6 +50,7 @@
             this.informsysDataSet = new Inf_sys_geogr_.informsysDataSet();
             this.usersTableAdapter = new Inf_sys_geogr_.informsysDataSetTableAdapters.UsersTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.warning = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -64,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(557, 26);
+            this.panel1.Size = new System.Drawing.Size(602, 26);
             this.panel1.TabIndex = 4;
             // 
             // bunifuFlatButton2
@@ -88,7 +89,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(503, -3);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(553, -3);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(89)))), ((int)(((byte)(120)))));
@@ -123,7 +124,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(522, -1);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(574, -1);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Red;
@@ -171,7 +172,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.usersDataGridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.usersDataGridview.EnableHeadersVisualStyles = false;
-            this.usersDataGridview.Location = new System.Drawing.Point(0, 26);
+            this.usersDataGridview.Location = new System.Drawing.Point(0, 56);
             this.usersDataGridview.Name = "usersDataGridview";
             this.usersDataGridview.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -185,7 +186,7 @@
             this.usersDataGridview.RowHeadersVisible = false;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.usersDataGridview.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.usersDataGridview.Size = new System.Drawing.Size(557, 315);
+            this.usersDataGridview.Size = new System.Drawing.Size(605, 291);
             this.usersDataGridview.TabIndex = 5;
             this.usersDataGridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDataGridview_CellContentClick);
             // 
@@ -205,6 +206,8 @@
             this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
             this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.usernameDataGridViewTextBoxColumn.Width = 110;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -215,13 +218,15 @@
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.emailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.emailDataGridViewTextBoxColumn.Width = 120;
+            this.emailDataGridViewTextBoxColumn.Width = 135;
             // 
             // passworddDataGridViewTextBoxColumn
             // 
             this.passworddDataGridViewTextBoxColumn.DataPropertyName = "passwordd";
             this.passworddDataGridViewTextBoxColumn.HeaderText = "passwordd";
             this.passworddDataGridViewTextBoxColumn.Name = "passworddDataGridViewTextBoxColumn";
+            this.passworddDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.passworddDataGridViewTextBoxColumn.Width = 120;
             // 
             // Изменить
             // 
@@ -259,17 +264,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(210, 297);
+            this.label1.Location = new System.Drawing.Point(232, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Пользователи";
             // 
+            // warning
+            // 
+            this.warning.AutoSize = true;
+            this.warning.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.warning.ForeColor = System.Drawing.Color.Red;
+            this.warning.Location = new System.Drawing.Point(0, 35);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(204, 19);
+            this.warning.TabIndex = 7;
+            this.warning.Text = "Заполните пустые поля!";
+            // 
             // UserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 347);
+            this.ClientSize = new System.Drawing.Size(602, 347);
+            this.Controls.Add(this.warning);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.usersDataGridview);
             this.Controls.Add(this.panel1);
@@ -296,12 +313,13 @@
         private informsysDataSet informsysDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private informsysDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passworddDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Изменить;
         private System.Windows.Forms.DataGridViewButtonColumn Добавить;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label warning;
     }
 }

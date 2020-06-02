@@ -49,6 +49,9 @@ namespace Inf_sys_geogr_
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
+            AdminList adminList = new AdminList(this);
+            this.Hide();
+            adminList.Show();
 
         }
     }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace Inf_sys_geogr_
 {
@@ -35,6 +36,7 @@ namespace Inf_sys_geogr_
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "informsysDataSet.Users". При необходимости она может быть перемещена или удалена.
             this.usersTableAdapter.Fill(this.informsysDataSet.Users);
+            warning.Visible = false;
 
         }
 
@@ -55,6 +57,31 @@ namespace Inf_sys_geogr_
                 UpdateDataGridView();
             }
 
+            if (e.ColumnIndex == 4)
+            {
+                using (var context = new informsysEntities())
+                {
+                    Users users = context.Users.Find(Convert.ToInt32(usersDataGridview.Rows[e.RowIndex].Cells[0].Value));
+                    if (users != null)
+                    {
+                        if (!(String.IsNullOrEmpty(usersDataGridview.Rows[e.RowIndex].Cells[1].Value.ToString())) && !(String.IsNullOrEmpty(usersDataGridview.Rows[e.RowIndex].Cells[2].Value.ToString()))
+                            && !(String.IsNullOrEmpty(usersDataGridview.Rows[e.RowIndex].Cells[3].Value.ToString())))
+                        {
+                            warning.Visible = false;
+                            users.username = usersDataGridview.Rows[e.RowIndex].Cells[1].Value.ToString();
+                            users.Email = usersDataGridview.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            users.passwordd = usersDataGridview.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                            context.Entry(users).State = EntityState.Modified;
+                            context.SaveChanges();
+
+                            UpdateDataGridView();
+                        }
+                        else { warning.Visible = true; }
+                    }
+                    else { MessageBox.Show("Пользователь не найден"); }
+                }
+            }
             
         }
     }
