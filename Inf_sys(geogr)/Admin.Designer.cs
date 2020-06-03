@@ -106,7 +106,7 @@
             this.password.ForeColor = System.Drawing.Color.White;
             this.password.HintForeColor = System.Drawing.Color.GhostWhite;
             this.password.HintText = "password";
-            this.password.isPassword = true;
+            this.password.isPassword = false;
             this.password.LineFocusedColor = System.Drawing.Color.DeepSkyBlue;
             this.password.LineIdleColor = System.Drawing.Color.White;
             this.password.LineMouseHoverColor = System.Drawing.Color.DeepSkyBlue;

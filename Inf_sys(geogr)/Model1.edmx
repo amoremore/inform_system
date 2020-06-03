@@ -5,15 +5,11 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Хранилище informsysModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "informsys.dbo.Admins" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="id" />
-            
-            
           </Key>
-          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="username" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="passwords" Type="nvarchar" MaxLength="30" Nullable="false" />
         </EntityType>
@@ -27,14 +23,8 @@
           <Property Name="passwordd" Type="nvarchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <EntityContainer Name="Хранилище informsysModelContainer">
+          <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Admins" EntityType="Self.Admins" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Admins].[id] AS [id], 
-    [Admins].[username] AS [username], 
-    [Admins].[passwords] AS [passwords]
-    FROM [dbo].[Admins] AS [Admins]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
