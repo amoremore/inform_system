@@ -1,0 +1,54 @@
+*{
+	box-sizing: border-box;
+}
+
+.heading{/*Заголовок*/
+  text-align: center;
+  color: #6050cc; 
+}
+
+.image{/*Кнопка назад*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-top: 20px;
+}
+
+
+.border{/*Примечания*/
+ background-color: #fdf9cc;
+ border: 1px solid #f7cfb3;
+ padding: 2px;
+ margin: 1px;
+ width: 100%;
+ display: inline-block;
+}
+
+.text{/*Текст в примечании*/
+width: 95%;
+float: right;
+ }
+
+ .picture{/*Картинка в примечании*/
+width: 5%;
+float: left;
+margin-top: 8px;
+ }
+
+ .Titleheading{/*Подтемы*/
+	
+ }
+
+ .ramka{/*Рамка в выводе*/
+	border:3px #7a79c9  dashed; 
+	width: 100%;
+}
+
+.ramka h2{/*Заголовок в выводе*/
+ text-align: center;
+}
+
+.textramka{/*Текст в примечании*/
+	width: 90%;
+	margin: 0 auto;
+}
