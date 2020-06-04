@@ -1,6 +1,36 @@
 *{
 	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
 }
+
+body{
+	background-image: url("D:\\Inform_system(geography)\\Inf_sys(geogr)\\html files\\image\\world.jpg");	
+	font-family: 'Scheherazade', serif;
+	
+}
+
+p{
+	font-size: 20px;
+}
+
+
+.MainBack{
+	width: 70%;
+	background: #D2D2D3;
+	margin: 0 auto;
+	margin-top: 5px;
+	padding: 8px;
+	border-radius: 15px;
+}
+
+.picturebox{
+	border-radius: 10px;
+	display: block;
+	margin: auto;
+	
+}
+
 
 .heading{/*Заголовок*/
   text-align: center;
@@ -18,7 +48,6 @@
 .border{/*Примечания*/
  background-color: #fdf9cc;
  border: 1px solid #f7cfb3;
- padding: 2px;
  margin: 1px;
  width: 100%;
  display: inline-block;
@@ -28,6 +57,7 @@
 width: 95%;
 float: right;
  }
+
 
  .picture{/*Картинка в примечании*/
 width: 5%;
@@ -42,6 +72,7 @@ margin-top: 8px;
  .ramka{/*Рамка в выводе*/
 	border:3px #7a79c9  dashed; 
 	width: 100%;
+
 }
 
 .ramka h2{/*Заголовок в выводе*/
