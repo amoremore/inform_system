@@ -33,12 +33,12 @@
             this.bunifuFlatButton14 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.quest = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.quest = new System.Windows.Forms.ListBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,14 +193,6 @@
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             // 
-            // quest
-            // 
-            this.quest.Location = new System.Drawing.Point(41, 48);
-            this.quest.Multiline = true;
-            this.quest.Name = "quest";
-            this.quest.Size = new System.Drawing.Size(650, 114);
-            this.quest.TabIndex = 10;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -259,17 +251,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // quest
+            // 
+            this.quest.FormattingEnabled = true;
+            this.quest.Location = new System.Drawing.Point(26, 41);
+            this.quest.Name = "quest";
+            this.quest.Size = new System.Drawing.Size(676, 121);
+            this.quest.TabIndex = 22;
+            // 
             // FinalTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 386);
+            this.Controls.Add(this.quest);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.quest);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FinalTests";
@@ -289,11 +289,11 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton14;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton10;
-        private System.Windows.Forms.TextBox quest;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox quest;
     }
 }
