@@ -27,5 +27,6 @@ namespace Inf_sys_geogr_
     
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Admins> Admins { get; set; }
+        public virtual DbSet<AllForTests> AllForTests { get; set; }
     }
 }

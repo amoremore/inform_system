@@ -108,6 +108,9 @@
     <Compile Include="Admins.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="AllForTests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="FinalTests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +163,18 @@
     <Compile Include="Sing_Up.Designer.cs">
       <DependentUpon>Sing_Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestsAdmin.Designer.cs">
+      <DependentUpon>TestsAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +216,12 @@
     </Compile>
     <EmbeddedResource Include="Sing_Up.resx">
       <DependentUpon>Sing_Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestsAdmin.resx">
+      <DependentUpon>TestsAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>

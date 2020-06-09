@@ -7,6 +7,7 @@
       <Diagram DiagramId="b0954d56442f4f9bb79214e1c48a5386" Name="Diagram1">
         <EntityTypeShape EntityType="informsysModel.Users" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="informsysModel.Admins" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="informsysModel.AllForTests" Width="1.5" PointX="6.5" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -44,7 +44,9 @@ namespace Inf_sys_geogr_
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-
+            TestsAdmin testsAdmin = new TestsAdmin(this);
+            this.Hide();
+            testsAdmin.Show();
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
