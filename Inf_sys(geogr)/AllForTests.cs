@@ -15,10 +15,9 @@ namespace Inf_sys_geogr_
     public partial class AllForTests
     {
         public int id { get; set; }
-        public string topic { get; set; }
-        public string questAndAnswerOptions { get; set; }
-        public string trueAnswer { get; set; }
-        public Nullable<int> priceThrows { get; set; }
-        public Nullable<int> testTime { get; set; }
+        public string TestTopic { get; set; }
+        public System.TimeSpan TestTime { get; set; }
+        public int TestScores { get; set; }
+        public string QuestAnswerTrueAnswer { get; set; }
     }
 }

@@ -18,11 +18,10 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="topic" Type="nvarchar" MaxLength="40" />
-          <Property Name="questAndAnswerOptions" Type="varchar(max)" />
-          <Property Name="trueAnswer" Type="nvarchar" MaxLength="40" />
-          <Property Name="priceThrows" Type="int" />
-          <Property Name="testTime" Type="int" />
+          <Property Name="TestTopic" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TestTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="TestScores" Type="int" Nullable="false" />
+          <Property Name="QuestAnswerTrueAnswer" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -69,11 +68,10 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="topic" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="questAndAnswerOptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="trueAnswer" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="priceThrows" Type="Int32" />
-          <Property Name="testTime" Type="Int32" />
+          <Property Name="TestTopic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TestTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="TestScores" Type="Int32" Nullable="false" />
+          <Property Name="QuestAnswerTrueAnswer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -103,11 +101,10 @@
           <EntitySetMapping Name="AllForTests">
             <EntityTypeMapping TypeName="informsysModel.AllForTests">
               <MappingFragment StoreEntitySet="AllForTests">
-                <ScalarProperty Name="testTime" ColumnName="testTime" />
-                <ScalarProperty Name="priceThrows" ColumnName="priceThrows" />
-                <ScalarProperty Name="trueAnswer" ColumnName="trueAnswer" />
-                <ScalarProperty Name="questAndAnswerOptions" ColumnName="questAndAnswerOptions" />
-                <ScalarProperty Name="topic" ColumnName="topic" />
+                <ScalarProperty Name="QuestAnswerTrueAnswer" ColumnName="QuestAnswerTrueAnswer" />
+                <ScalarProperty Name="TestScores" ColumnName="TestScores" />
+                <ScalarProperty Name="TestTime" ColumnName="TestTime" />
+                <ScalarProperty Name="TestTopic" ColumnName="TestTopic" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

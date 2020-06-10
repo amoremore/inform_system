@@ -76,10 +76,10 @@ namespace Inf_sys_geogr_
 
             test.setQuestions.Add(setQuestion);
 
-            json = JsonSerializer.Serialize<Test>(test,jso);
+            //json = JsonSerializer.Serialize<Test>(test,jso);
 
-            allForTests.questAndAnswerOptions = json;
-            allForTests.testTime = 5;
+            //allForTests.questAndAnswerOptions = json;
+           // allForTests.testTime = 5;
             context.AllForTests.Add(allForTests);
             context.SaveChanges();
 
@@ -113,7 +113,7 @@ namespace Inf_sys_geogr_
 
             test.setQuestions.Add(setQuestion);
 
-            json = JsonSerializer.Serialize<Test>(test);
+            //json = JsonSerializer.Serialize<Test>(test);
 
 
 
@@ -129,6 +129,8 @@ namespace Inf_sys_geogr_
     {
         public string question { get; set; }
         public string[] answer { get; set; }
+
+        public string trueAnswer { get; set; }
     }
 
     class Test
