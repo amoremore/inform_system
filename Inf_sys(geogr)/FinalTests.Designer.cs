@@ -40,7 +40,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.quest = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -197,18 +199,19 @@
             // otvet1
             // 
             this.otvet1.AutoSize = true;
-            this.otvet1.Location = new System.Drawing.Point(47, 178);
+            this.otvet1.Location = new System.Drawing.Point(6, 14);
             this.otvet1.Name = "otvet1";
             this.otvet1.Size = new System.Drawing.Size(85, 17);
             this.otvet1.TabIndex = 11;
             this.otvet1.TabStop = true;
             this.otvet1.Text = "radioButton1";
             this.otvet1.UseVisualStyleBackColor = true;
+            
             // 
             // otvet2
             // 
             this.otvet2.AutoSize = true;
-            this.otvet2.Location = new System.Drawing.Point(47, 211);
+            this.otvet2.Location = new System.Drawing.Point(6, 47);
             this.otvet2.Name = "otvet2";
             this.otvet2.Size = new System.Drawing.Size(85, 17);
             this.otvet2.TabIndex = 12;
@@ -219,7 +222,7 @@
             // otvet3
             // 
             this.otvet3.AutoSize = true;
-            this.otvet3.Location = new System.Drawing.Point(47, 244);
+            this.otvet3.Location = new System.Drawing.Point(6, 80);
             this.otvet3.Name = "otvet3";
             this.otvet3.Size = new System.Drawing.Size(85, 17);
             this.otvet3.TabIndex = 13;
@@ -230,7 +233,7 @@
             // otvet4
             // 
             this.otvet4.AutoSize = true;
-            this.otvet4.Location = new System.Drawing.Point(47, 277);
+            this.otvet4.Location = new System.Drawing.Point(6, 113);
             this.otvet4.Name = "otvet4";
             this.otvet4.Size = new System.Drawing.Size(85, 17);
             this.otvet4.TabIndex = 14;
@@ -274,18 +277,28 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.otvet3);
+            this.groupBox1.Controls.Add(this.otvet1);
+            this.groupBox1.Controls.Add(this.otvet2);
+            this.groupBox1.Controls.Add(this.otvet4);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(41, 168);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 136);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            // 
             // FinalTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 386);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.quest);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.otvet4);
-            this.Controls.Add(this.otvet3);
-            this.Controls.Add(this.otvet2);
-            this.Controls.Add(this.otvet1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FinalTests";
@@ -293,8 +306,9 @@
             this.Text = "FinalTests";
             this.Load += new System.EventHandler(this.FinalTests_Load);
             this.panel3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -312,5 +326,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox quest;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

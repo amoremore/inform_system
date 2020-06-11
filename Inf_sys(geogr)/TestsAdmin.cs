@@ -17,7 +17,7 @@ namespace Inf_sys_geogr_
         Test test = new Test();
         public string json;
         public int position = 30;
-        public TextBox[] tb = new TextBox[4];
+        public TextBox[] tb = new TextBox[0];
         //TimeSpan timeSpan;
         adminMain adminMain;
         public TestsAdmin(adminMain adminMain)
@@ -46,9 +46,11 @@ namespace Inf_sys_geogr_
         private string[] readtest()
         {
 
-            string[] textfortextbox = new string[4];
+            string[] textfortextbox = new string[0];
+            
             for (int i = 0; i < tb.Length; i++)
             {
+                Array.Resize(ref textfortextbox, textfortextbox.Length + 1);
                 textfortextbox[i] += tb[i].Text;
             }
             return textfortextbox;
@@ -56,19 +58,17 @@ namespace Inf_sys_geogr_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-                for (int i = 0; i < tb.Length; i++)
-                {
-                    tb[i] = new System.Windows.Forms.TextBox();
-                    tb[i].Location = new System.Drawing.Point(24, 155 + i * position);
-                    tb[i].Name = "answerr" + i.ToString();
-                    tb[i].Size = new System.Drawing.Size(362, 23);
-                    tb[i].TabIndex = i;
-                    tb[i].Text = "";
+            Array.Resize(ref tb, tb.Length + 1);
+                    tb[tb.Length-1] = new System.Windows.Forms.TextBox();
+                    tb[tb.Length-1].Location = new System.Drawing.Point(24, 155 + (tb.Length-1) * position);
+                    tb[tb.Length-1].Name = "answerr" + (tb.Length-1).ToString();
+                    tb[tb.Length-1].Size = new System.Drawing.Size(362, 23);
+                    tb[tb.Length-1].TabIndex = tb.Length-1;
+                    tb[tb.Length-1].Text = "";
 
-                    tabPage1.Controls.Add(tb[i]);
+                    tabPage1.Controls.Add(tb[tb.Length-1]);
                    
-                }
+                
            
         }
 
@@ -149,7 +149,15 @@ namespace Inf_sys_geogr_
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.ColumnIndex == 6)
+            {
+                informsysEntities context = new informsysEntities();
+                AllForTests allForTests = context.AllForTests.Find(dateGridViewAllfortests.Rows[e.RowIndex].Cells[0].Value);
+                context.AllForTests.Remove(allForTests);
+                context.SaveChanges();
+
+                this.allForTestsTableAdapter.Fill(this.informsysDataSet1.AllForTests);
+            }
         }
     }
 }

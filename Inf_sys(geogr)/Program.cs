@@ -16,7 +16,7 @@ namespace Inf_sys_geogr_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new adminMain());
+            Application.Run(new Main_user());
         }
     }
 }

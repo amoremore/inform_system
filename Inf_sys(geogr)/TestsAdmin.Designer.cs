@@ -54,14 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.testtopic = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.informsysDataSet = new Inf_sys_geogr_.informsysDataSet();
-            this.testjsonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.testjsonTableAdapter = new Inf_sys_geogr_.informsysDataSetTableAdapters.TestjsonTableAdapter();
-            this.informsysDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.informsysDataSet1 = new Inf_sys_geogr_.informsysDataSet1();
-            this.allForTestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.allForTestsTableAdapter = new Inf_sys_geogr_.informsysDataSet1TableAdapters.AllForTestsTableAdapter();
+            this.dateGridViewAllfortests = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTopicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,16 +62,23 @@
             this.questAnswerTrueAnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Изменить = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Удалить = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.allForTestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.informsysDataSet1 = new Inf_sys_geogr_.informsysDataSet1();
+            this.informsysDataSet = new Inf_sys_geogr_.informsysDataSet();
+            this.testjsonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testjsonTableAdapter = new Inf_sys_geogr_.informsysDataSetTableAdapters.TestjsonTableAdapter();
+            this.informsysDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allForTestsTableAdapter = new Inf_sys_geogr_.informsysDataSet1TableAdapters.AllForTestsTableAdapter();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateGridViewAllfortests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allForTestsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informsysDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.informsysDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testjsonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.informsysDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.informsysDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allForTestsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFlatButton2
@@ -320,7 +320,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.dateGridViewAllfortests);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -328,12 +328,12 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Изменить тест";
             // 
-            // dataGridView1
+            // dateGridViewAllfortests
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateGridViewAllfortests.AllowUserToAddRows = false;
+            this.dateGridViewAllfortests.AutoGenerateColumns = false;
+            this.dateGridViewAllfortests.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dateGridViewAllfortests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -341,9 +341,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dateGridViewAllfortests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dateGridViewAllfortests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dateGridViewAllfortests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.testTopicDataGridViewTextBoxColumn,
             this.testTimeDataGridViewTextBoxColumn,
@@ -351,7 +351,7 @@
             this.questAnswerTrueAnswerDataGridViewTextBoxColumn,
             this.Изменить,
             this.Удалить});
-            this.dataGridView1.DataSource = this.allForTestsBindingSource;
+            this.dateGridViewAllfortests.DataSource = this.allForTestsBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ScrollBar;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -359,10 +359,10 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
+            this.dateGridViewAllfortests.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dateGridViewAllfortests.EnableHeadersVisualStyles = false;
+            this.dateGridViewAllfortests.Location = new System.Drawing.Point(0, 0);
+            this.dateGridViewAllfortests.Name = "dateGridViewAllfortests";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -370,47 +370,14 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersVisible = false;
+            this.dateGridViewAllfortests.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dateGridViewAllfortests.RowHeadersVisible = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 168);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // informsysDataSet
-            // 
-            this.informsysDataSet.DataSetName = "informsysDataSet";
-            this.informsysDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // testjsonBindingSource
-            // 
-            this.testjsonBindingSource.DataMember = "Testjson";
-            this.testjsonBindingSource.DataSource = this.informsysDataSet;
-            // 
-            // testjsonTableAdapter
-            // 
-            this.testjsonTableAdapter.ClearBeforeFill = true;
-            // 
-            // informsysDataSetBindingSource
-            // 
-            this.informsysDataSetBindingSource.DataSource = this.informsysDataSet;
-            this.informsysDataSetBindingSource.Position = 0;
-            // 
-            // informsysDataSet1
-            // 
-            this.informsysDataSet1.DataSetName = "informsysDataSet1";
-            this.informsysDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // allForTestsBindingSource
-            // 
-            this.allForTestsBindingSource.DataMember = "AllForTests";
-            this.allForTestsBindingSource.DataSource = this.informsysDataSet1;
-            // 
-            // allForTestsTableAdapter
-            // 
-            this.allForTestsTableAdapter.ClearBeforeFill = true;
+            this.dateGridViewAllfortests.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dateGridViewAllfortests.Size = new System.Drawing.Size(726, 168);
+            this.dateGridViewAllfortests.TabIndex = 0;
+            this.dateGridViewAllfortests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -472,6 +439,39 @@
             this.Удалить.UseColumnTextForButtonValue = true;
             this.Удалить.Width = 87;
             // 
+            // allForTestsBindingSource
+            // 
+            this.allForTestsBindingSource.DataMember = "AllForTests";
+            this.allForTestsBindingSource.DataSource = this.informsysDataSet1;
+            // 
+            // informsysDataSet1
+            // 
+            this.informsysDataSet1.DataSetName = "informsysDataSet1";
+            this.informsysDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // informsysDataSet
+            // 
+            this.informsysDataSet.DataSetName = "informsysDataSet";
+            this.informsysDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // testjsonBindingSource
+            // 
+            this.testjsonBindingSource.DataMember = "Testjson";
+            this.testjsonBindingSource.DataSource = this.informsysDataSet;
+            // 
+            // testjsonTableAdapter
+            // 
+            this.testjsonTableAdapter.ClearBeforeFill = true;
+            // 
+            // informsysDataSetBindingSource
+            // 
+            this.informsysDataSetBindingSource.DataSource = this.informsysDataSet;
+            this.informsysDataSetBindingSource.Position = 0;
+            // 
+            // allForTestsTableAdapter
+            // 
+            this.allForTestsTableAdapter.ClearBeforeFill = true;
+            // 
             // TestsAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,12 +489,12 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateGridViewAllfortests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allForTestsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informsysDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.informsysDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testjsonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.informsysDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.informsysDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allForTestsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,7 +521,7 @@
         private System.Windows.Forms.TextBox timetest;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dateGridViewAllfortests;
         private informsysDataSet informsysDataSet;
         private System.Windows.Forms.BindingSource testjsonBindingSource;
         private informsysDataSetTableAdapters.TestjsonTableAdapter testjsonTableAdapter;
