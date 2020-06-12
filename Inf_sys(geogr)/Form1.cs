@@ -14,6 +14,7 @@ namespace Inf_sys_geogr_
 {
     public partial class Form1 : Form
     {
+        public string nameuser;
         public Form1()
         {
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace Inf_sys_geogr_
           informsysEntities context = new informsysEntities();
           Users users = context.Users.Where(p => p.username == Login.Text).FirstOrDefault();
           wrongdata.Visible = false;
+
+           nameuser = users.username;
 
             if (users != null && users.passwordd == password.Text)
             {

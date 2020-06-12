@@ -12,9 +12,26 @@ namespace Inf_sys_geogr_
 {
     public partial class Statistics : Form
     {
-        public Statistics()
+
+        ListsTests ListsTests;
+        public Statistics(ListsTests listsTests)
         {
             InitializeComponent();
+            this.ListsTests = listsTests;
+           
+            
+        }
+
+        private void bunifuFlatButton14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListsTests.Show();
+            
+        }
+
+        private void bunifuFlatButton13_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
