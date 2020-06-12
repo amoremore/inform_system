@@ -24,6 +24,14 @@ namespace Inf_sys_geogr_
         float ballfortrueanswer;
         public string time;
         TimeSpan timeSpan = new TimeSpan();
+        public string testtopic;
+        public string nameuser;
+        int trueAnswer;
+        int ocenka;
+
+
+
+
 
 
 
@@ -31,6 +39,7 @@ namespace Inf_sys_geogr_
         {
             InitializeComponent();
             this.ListsTests = listsTests;
+            
         }
 
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
@@ -98,6 +107,9 @@ namespace Inf_sys_geogr_
 
             AllForTests allForTests = Loadingtest();
 
+            testtopic = allForTests.TestTopic;
+            
+
             Test test = new Test();
 
             datejson = allForTests.QuestAnswerTrueAnswer;
@@ -120,9 +132,20 @@ namespace Inf_sys_geogr_
             timeSpan = new TimeSpan(Convert.ToInt32(timetest[0]), Convert.ToInt32(timetest[1]), Convert.ToInt32(timetest[2]));
             label1.Text = timeSpan.ToString("hh\\:mm\\:ss");
             timer1.Start();
+            TimeSpan span = timeSpan;
    
 
            // MessageBox.Show(ballfortrueanswer.ToString());
+
+            //tests
+
+             
+
+
+
+         
+
+            
 
 
             Array.Resize(ref qust, qust.Length + 1);
@@ -153,10 +176,14 @@ namespace Inf_sys_geogr_
         {
             Test test1 = JsonSerializer.Deserialize<Test>(datejson);
 
-            if (CheckRadiobuttons(groupBox1) == test1.setQuestions[qust.Length - 1].trueAnswer) ballsfortest+=ballfortrueanswer;
-            MessageBox.Show(ballsfortest.ToString());
+            if (CheckRadiobuttons(groupBox1) == test1.setQuestions[qust.Length - 1].trueAnswer)
+            {
 
+                ballsfortest += ballfortrueanswer;
+                trueAnswer++;
 
+            }
+            
             update();
 
             if (qust.Length < count)
@@ -187,19 +214,55 @@ namespace Inf_sys_geogr_
             }
             else
             {
-                MessageBox.Show("TEST OKONCHEN");
+                //MessageBox.Show("TEST OKONCHEN");
+
+                string trueanswers = String.Format("{0} / {1}", trueAnswer, count);
+                MessageBox.Show(trueanswers);
+
+                string testsustem = String.Format("{0} / {1}", ballsfortest, balls);
+                MessageBox.Show(testsustem);
+
+                float way = (ballsfortest * 100) / balls;
+                if (way >= 90)
+                {
+                    ocenka = 5;
+                }
+                else if (way >= 75)
+                {
+                    ocenka = 4;
+                }
+                else if (way >= 50)
+                {
+                    ocenka = 3;
+                }
+                else { ocenka = 2; }
+
+                string procentway = String.Format("{0}%", way);
+                MessageBox.Show(procentway);
+                
+                //MessageBox.Show(way.ToString());
+
+               
+                MessageBox.Show(ocenka.ToString());
+               
+
+                
+
+                
+
+
+
+
+                informsysEntities context = new informsysEntities();
+
+                string name = nameuser;
+
+
                 Statistics statistics = new Statistics(ListsTests);
                 this.Hide();
                 statistics.Show();
                 
             }
-        }
-
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           // kol_voprosov--;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -210,6 +273,7 @@ namespace Inf_sys_geogr_
                 {
                     timeSpan = timeSpan.Subtract(TimeSpan.FromSeconds(1));
                     label1.Text = timeSpan.ToString();
+                    TimeSpan span = timeSpan - timeSpan;
                 }
                 else
                 {

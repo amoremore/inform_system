@@ -12,7 +12,7 @@ namespace Inf_sys_geogr_
 {
     public partial class Statistics : Form
     {
-
+       
         ListsTests ListsTests;
         public Statistics(ListsTests listsTests)
         {

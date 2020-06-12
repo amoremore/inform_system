@@ -50,6 +50,7 @@ namespace Inf_sys_geogr_
             if (users != null && users.passwordd == password.Text)
             {
                 Main_user main_User = new Main_user();
+                main_User.name = nameuser;
                 this.Hide();
                 main_User.Show();
             }

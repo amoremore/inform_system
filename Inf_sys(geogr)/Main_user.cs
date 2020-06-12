@@ -12,7 +12,7 @@ namespace Inf_sys_geogr_
 {
     public partial class Main_user : Form
     {
-        
+        public string name;
         public Main_user()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace Inf_sys_geogr_
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             ListsTests listsTests = new ListsTests(this);
+            listsTests.name = name;
             this.Hide();
             listsTests.Show();   
         }

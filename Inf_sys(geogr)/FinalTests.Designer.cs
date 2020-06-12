@@ -40,7 +40,6 @@
             this.otvet4 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.quest = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -265,20 +264,6 @@
             this.quest.Size = new System.Drawing.Size(676, 121);
             this.quest.TabIndex = 22;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(20)))));
-            this.button2.Location = new System.Drawing.Point(412, 324);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 34);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "пердыдущий";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.otvet3);
@@ -295,7 +280,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(444, 215);
+            this.label1.Location = new System.Drawing.Point(632, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 25;
@@ -313,7 +298,6 @@
             this.ClientSize = new System.Drawing.Size(730, 386);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.quest);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
@@ -343,7 +327,6 @@
         private System.Windows.Forms.RadioButton otvet4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox quest;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;

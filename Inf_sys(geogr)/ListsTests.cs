@@ -15,6 +15,7 @@ namespace Inf_sys_geogr_
     
     public partial class ListsTests : Form
     {
+        public string name;
         public string json;
         public int Selectedtest;
         Main_user main_User;
@@ -44,6 +45,7 @@ namespace Inf_sys_geogr_
             
             Selectedtest = 3;
             FinalTests finalTests = new FinalTests(this);
+            finalTests.nameuser = name;
 
             
 
