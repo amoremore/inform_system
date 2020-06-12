@@ -28,6 +28,7 @@ namespace Inf_sys_geogr_
         public string nameuser;
         int trueAnswer;
         int ocenka;
+        TimeSpan alltime = new TimeSpan();
 
 
 
@@ -130,22 +131,24 @@ namespace Inf_sys_geogr_
             
             string[] timetest = time.Split(':');
             timeSpan = new TimeSpan(Convert.ToInt32(timetest[0]), Convert.ToInt32(timetest[1]), Convert.ToInt32(timetest[2]));
+            alltime = timeSpan;
             label1.Text = timeSpan.ToString("hh\\:mm\\:ss");
             timer1.Start();
-            TimeSpan span = timeSpan;
-   
+         
+            
 
-           // MessageBox.Show(ballfortrueanswer.ToString());
+
+            // MessageBox.Show(ballfortrueanswer.ToString());
 
             //tests
 
-             
 
 
 
-         
 
-            
+
+
+
 
 
             Array.Resize(ref qust, qust.Length + 1);
@@ -188,7 +191,7 @@ namespace Inf_sys_geogr_
 
             if (qust.Length < count)
             {
-                
+
 
                 Array.Resize(ref qust, qust.Length + 1);
                 quest.Items.Add(test1.setQuestions[qust.Length - 1].question);
@@ -216,11 +219,14 @@ namespace Inf_sys_geogr_
             {
                 //MessageBox.Show("TEST OKONCHEN");
 
-                string trueanswers = String.Format("{0} / {1}", trueAnswer, count);
-                MessageBox.Show(trueanswers);
 
-                string testsustem = String.Format("{0} / {1}", ballsfortest, balls);
-                MessageBox.Show(testsustem);
+
+                timer1.Stop();
+
+                TimeSpan passage = new TimeSpan();
+                passage = alltime - timeSpan;
+
+                string allpassage = String.Format("{0} / {1} ", passage, alltime); 
 
                 float way = (ballsfortest * 100) / balls;
                 if (way >= 90)
@@ -237,25 +243,31 @@ namespace Inf_sys_geogr_
                 }
                 else { ocenka = 2; }
 
-                string procentway = String.Format("{0}%", way);
-                MessageBox.Show(procentway);
-                
+               
+
                 //MessageBox.Show(way.ToString());
 
-               
+                string name = nameuser;
+
+
                 MessageBox.Show(ocenka.ToString());
+
                
-
-                
-
-                
-
-
-
-
                 informsysEntities context = new informsysEntities();
 
-                string name = nameuser;
+                UserStatistics userStatistics = new UserStatistics();
+
+                userStatistics.UserName = name;
+                userStatistics.TestName = testtopic;
+                userStatistics.TrueAnswer = String.Format("{0} / {1}", trueAnswer, count);
+                userStatistics.SetBalls = String.Format("{0} / {1}", ballsfortest, balls);
+                userStatistics.Way = String.Format("{0}%", way);
+                userStatistics.Assessment = ocenka;
+                userStatistics.traveltime = allpassage;
+
+                context.UserStatistics.Add(userStatistics);
+                context.SaveChanges();
+
 
 
                 Statistics statistics = new Statistics(ListsTests);
@@ -273,7 +285,7 @@ namespace Inf_sys_geogr_
                 {
                     timeSpan = timeSpan.Subtract(TimeSpan.FromSeconds(1));
                     label1.Text = timeSpan.ToString();
-                    TimeSpan span = timeSpan - timeSpan;
+                    
                 }
                 else
                 {

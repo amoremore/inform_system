@@ -28,12 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuFlatButton13 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton14 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.itogitesta = new System.Windows.Forms.DataGridView();
+            this.Номер = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Пользователь = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Тест = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ПравОтветы = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ballss = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.путь = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Время = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.оценка = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itogitesta)).BeginInit();
             this.SuspendLayout();
@@ -191,11 +200,87 @@
             // 
             // itogitesta
             // 
+            this.itogitesta.AllowUserToAddRows = false;
+            this.itogitesta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itogitesta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.itogitesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itogitesta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Номер,
+            this.Пользователь,
+            this.Тест,
+            this.ПравОтветы,
+            this.ballss,
+            this.путь,
+            this.Время,
+            this.оценка});
             this.itogitesta.Location = new System.Drawing.Point(0, 32);
             this.itogitesta.Name = "itogitesta";
+            this.itogitesta.RowHeadersVisible = false;
             this.itogitesta.Size = new System.Drawing.Size(730, 182);
             this.itogitesta.TabIndex = 11;
+            // 
+            // Номер
+            // 
+            this.Номер.HeaderText = "Номер";
+            this.Номер.Name = "Номер";
+            this.Номер.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Номер.Width = 50;
+            // 
+            // Пользователь
+            // 
+            this.Пользователь.HeaderText = "Пользователь";
+            this.Пользователь.Name = "Пользователь";
+            this.Пользователь.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Пользователь.Width = 90;
+            // 
+            // Тест
+            // 
+            this.Тест.HeaderText = "Тест";
+            this.Тест.Name = "Тест";
+            this.Тест.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Тест.Width = 50;
+            // 
+            // ПравОтветы
+            // 
+            this.ПравОтветы.HeaderText = "Верные ответы";
+            this.ПравОтветы.Name = "ПравОтветы";
+            this.ПравОтветы.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ПравОтветы.Width = 130;
+            // 
+            // ballss
+            // 
+            this.ballss.HeaderText = "Баллы";
+            this.ballss.Name = "ballss";
+            this.ballss.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ballss.Width = 70;
+            // 
+            // путь
+            // 
+            this.путь.HeaderText = "Пройдено";
+            this.путь.Name = "путь";
+            this.путь.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.путь.Width = 80;
+            // 
+            // Время
+            // 
+            this.Время.HeaderText = "Затраченное время";
+            this.Время.Name = "Время";
+            this.Время.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Время.Width = 120;
+            // 
+            // оценка
+            // 
+            this.оценка.HeaderText = "Оценка";
+            this.оценка.Name = "оценка";
+            this.оценка.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.оценка.Width = 80;
             // 
             // Statistics
             // 
@@ -208,6 +293,7 @@
             this.Name = "Statistics";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Statistics";
+            this.Load += new System.EventHandler(this.Statistics_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itogitesta)).EndInit();
             this.ResumeLayout(false);
@@ -222,5 +308,13 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton10;
         private System.Windows.Forms.DataGridView itogitesta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Номер;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Пользователь;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Тест;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ПравОтветы;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ballss;
+        private System.Windows.Forms.DataGridViewTextBoxColumn путь;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Время;
+        private System.Windows.Forms.DataGridViewTextBoxColumn оценка;
     }
 }

@@ -32,10 +32,24 @@
           <Property Name="Email" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="passwordd" Type="nvarchar" MaxLength="30" Nullable="false" />
         </EntityType>
+        <EntityType Name="UserStatistics">
+          <Key>
+            <PropertyRef Name="Nomer" />
+          </Key>
+          <Property Name="Nomer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="TestName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrueAnswer" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="SetBalls" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Way" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Assessment" Type="int" Nullable="false" />
+          <Property Name="traveltime" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="Хранилище informsysModelContainer">
           <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AllForTests" EntityType="Self.AllForTests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserStatistics" EntityType="Self.UserStatistics" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -54,6 +68,7 @@
           <EntitySet Name="Users" EntityType="Self.Users" />
           <EntitySet Name="Admins" EntityType="informsysModel.Admins" />
           <EntitySet Name="AllForTests" EntityType="informsysModel.AllForTests" />
+          <EntitySet Name="UserStatistics" EntityType="informsysModel.UserStatistics" />
         </EntityContainer>
         <EntityType Name="Admins">
           <Key>
@@ -72,6 +87,19 @@
           <Property Name="TestTime" Type="Time" Nullable="false" Precision="7" />
           <Property Name="TestScores" Type="Int32" Nullable="false" />
           <Property Name="QuestAnswerTrueAnswer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserStatistics">
+          <Key>
+            <PropertyRef Name="Nomer" />
+          </Key>
+          <Property Name="Nomer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TestName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrueAnswer" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SetBalls" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Way" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Assessment" Type="Int32" Nullable="false" />
+          <Property Name="traveltime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -106,6 +134,20 @@
                 <ScalarProperty Name="TestTime" ColumnName="TestTime" />
                 <ScalarProperty Name="TestTopic" ColumnName="TestTopic" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserStatistics">
+            <EntityTypeMapping TypeName="informsysModel.UserStatistics">
+              <MappingFragment StoreEntitySet="UserStatistics">
+                <ScalarProperty Name="traveltime" ColumnName="traveltime" />
+                <ScalarProperty Name="Assessment" ColumnName="Assessment" />
+                <ScalarProperty Name="Way" ColumnName="Way" />
+                <ScalarProperty Name="SetBalls" ColumnName="SetBalls" />
+                <ScalarProperty Name="TrueAnswer" ColumnName="TrueAnswer" />
+                <ScalarProperty Name="TestName" ColumnName="TestName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Nomer" ColumnName="Nomer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
