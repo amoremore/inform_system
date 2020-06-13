@@ -36,12 +36,29 @@ namespace Inf_sys_geogr_
         private void Statistics_Load(object sender, EventArgs e)
         {
             informsysEntities context = new informsysEntities();
-            UserStatistics userStatistics = context.UserStatistics.Where(p => p.UserName == ListsTests.name).FirstOrDefault();
+            //UserStatistics userStatistics = context.UserStatistics.Where(p => p.UserName == ListsTests.name).FirstOrDefault();
 
-            if (userStatistics != null)
+            
+            foreach (UserStatistics userStatistics in context.UserStatistics)
             {
-                MessageBox.Show(userStatistics.ToString());
+                if (userStatistics.UserName == ListsTests.name)
+                {
+                    int rownumber = itogitesta.Rows.Add();
+                    MessageBox.Show(userStatistics.UserName);
+                    itogitesta.Rows[rownumber].Cells[0].Value = userStatistics.Nomer;
+                    itogitesta.Rows[rownumber].Cells[1].Value = userStatistics.UserName;
+                    itogitesta.Rows[rownumber].Cells[2].Value = userStatistics.TestName;
+                    itogitesta.Rows[rownumber].Cells[3].Value = userStatistics.TrueAnswer;
+                    itogitesta.Rows[rownumber].Cells[4].Value = userStatistics.SetBalls;
+                    itogitesta.Rows[rownumber].Cells[5].Value = userStatistics.Way;
+                    itogitesta.Rows[rownumber].Cells[6].Value = userStatistics.traveltime;
+                    itogitesta.Rows[rownumber].Cells[7].Value = userStatistics.Assessment;
+
+                }
+                else { MessageBox.Show("user does not exist"); }
             }
+
+         
         }
     }
 }

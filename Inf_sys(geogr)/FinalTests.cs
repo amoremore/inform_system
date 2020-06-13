@@ -31,11 +31,6 @@ namespace Inf_sys_geogr_
         TimeSpan alltime = new TimeSpan();
 
 
-
-
-
-
-
         public FinalTests(ListsTests listsTests)
         {
             InitializeComponent();
@@ -126,7 +121,7 @@ namespace Inf_sys_geogr_
 
 
             time = Convert.ToString(allForTests.TestTime);
-           // MessageBox.Show(time);
+           
 
             
             string[] timetest = time.Split(':');
@@ -135,21 +130,6 @@ namespace Inf_sys_geogr_
             label1.Text = timeSpan.ToString("hh\\:mm\\:ss");
             timer1.Start();
          
-            
-
-
-            // MessageBox.Show(ballfortrueanswer.ToString());
-
-            //tests
-
-
-
-
-
-
-
-
-
 
             Array.Resize(ref qust, qust.Length + 1);
 
@@ -217,10 +197,7 @@ namespace Inf_sys_geogr_
             }
             else
             {
-                //MessageBox.Show("TEST OKONCHEN");
-
-
-
+                
                 timer1.Stop();
 
                 TimeSpan passage = new TimeSpan();
@@ -244,15 +221,9 @@ namespace Inf_sys_geogr_
                 else { ocenka = 2; }
 
                
-
-                //MessageBox.Show(way.ToString());
-
                 string name = nameuser;
 
 
-                MessageBox.Show(ocenka.ToString());
-
-               
                 informsysEntities context = new informsysEntities();
 
                 UserStatistics userStatistics = new UserStatistics();
@@ -265,8 +236,8 @@ namespace Inf_sys_geogr_
                 userStatistics.Assessment = ocenka;
                 userStatistics.traveltime = allpassage;
 
-                context.UserStatistics.Add(userStatistics);
-                context.SaveChanges();
+                //context.UserStatistics.Add(userStatistics);
+               // context.SaveChanges();
 
 
 
@@ -293,6 +264,36 @@ namespace Inf_sys_geogr_
                     MessageBox.Show("Exam Time is Finished");
                 }
             }
+        }
+
+        private void otvet1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void otvet2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void otvet3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void otvet4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

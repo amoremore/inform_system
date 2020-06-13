@@ -43,8 +43,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -201,46 +205,54 @@
             // otvet1
             // 
             this.otvet1.AutoSize = true;
+            this.otvet1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otvet1.Location = new System.Drawing.Point(6, 14);
             this.otvet1.Name = "otvet1";
-            this.otvet1.Size = new System.Drawing.Size(85, 17);
+            this.otvet1.Size = new System.Drawing.Size(109, 21);
             this.otvet1.TabIndex = 11;
             this.otvet1.TabStop = true;
             this.otvet1.Text = "radioButton1";
             this.otvet1.UseVisualStyleBackColor = true;
+            this.otvet1.CheckedChanged += new System.EventHandler(this.otvet1_CheckedChanged);
             // 
             // otvet2
             // 
             this.otvet2.AutoSize = true;
+            this.otvet2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otvet2.Location = new System.Drawing.Point(6, 47);
             this.otvet2.Name = "otvet2";
-            this.otvet2.Size = new System.Drawing.Size(85, 17);
+            this.otvet2.Size = new System.Drawing.Size(109, 21);
             this.otvet2.TabIndex = 12;
             this.otvet2.TabStop = true;
             this.otvet2.Text = "radioButton2";
             this.otvet2.UseVisualStyleBackColor = true;
+            this.otvet2.CheckedChanged += new System.EventHandler(this.otvet2_CheckedChanged);
             // 
             // otvet3
             // 
             this.otvet3.AutoSize = true;
+            this.otvet3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otvet3.Location = new System.Drawing.Point(6, 80);
             this.otvet3.Name = "otvet3";
-            this.otvet3.Size = new System.Drawing.Size(85, 17);
+            this.otvet3.Size = new System.Drawing.Size(109, 21);
             this.otvet3.TabIndex = 13;
             this.otvet3.TabStop = true;
             this.otvet3.Text = "radioButton3";
             this.otvet3.UseVisualStyleBackColor = true;
+            this.otvet3.CheckedChanged += new System.EventHandler(this.otvet3_CheckedChanged);
             // 
             // otvet4
             // 
             this.otvet4.AutoSize = true;
+            this.otvet4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otvet4.Location = new System.Drawing.Point(6, 113);
             this.otvet4.Name = "otvet4";
-            this.otvet4.Size = new System.Drawing.Size(85, 17);
+            this.otvet4.Size = new System.Drawing.Size(109, 21);
             this.otvet4.TabIndex = 14;
             this.otvet4.TabStop = true;
             this.otvet4.Text = "radioButton4";
             this.otvet4.UseVisualStyleBackColor = true;
+            this.otvet4.CheckedChanged += new System.EventHandler(this.otvet4_CheckedChanged);
             // 
             // button1
             // 
@@ -248,20 +260,24 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(20)))));
-            this.button1.Location = new System.Drawing.Point(41, 324);
+            this.button1.Location = new System.Drawing.Point(563, 329);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 34);
+            this.button1.Size = new System.Drawing.Size(149, 34);
             this.button1.TabIndex = 21;
-            this.button1.Text = "Следующий вопрос";
+            this.button1.Text = "Далее";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // quest
             // 
+            this.quest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(183)))), ((int)(((byte)(235)))));
+            this.quest.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.quest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.quest.FormattingEnabled = true;
-            this.quest.Location = new System.Drawing.Point(26, 41);
+            this.quest.ItemHeight = 21;
+            this.quest.Location = new System.Drawing.Point(6, 14);
             this.quest.Name = "quest";
-            this.quest.Size = new System.Drawing.Size(676, 121);
+            this.quest.Size = new System.Drawing.Size(674, 84);
             this.quest.TabIndex = 22;
             // 
             // groupBox1
@@ -271,18 +287,20 @@
             this.groupBox1.Controls.Add(this.otvet2);
             this.groupBox1.Controls.Add(this.otvet4);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(41, 168);
+            this.groupBox1.Location = new System.Drawing.Point(26, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 136);
+            this.groupBox1.Size = new System.Drawing.Size(687, 136);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(632, 203);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(659, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 25;
             this.label1.Text = "label1";
             // 
@@ -291,14 +309,45 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.quest);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(26, 55);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(686, 107);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(20)))));
+            this.button2.Location = new System.Drawing.Point(26, 329);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 34);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // FinalTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(183)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(730, 386);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.quest);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -309,6 +358,7 @@
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +380,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
     }
 }
