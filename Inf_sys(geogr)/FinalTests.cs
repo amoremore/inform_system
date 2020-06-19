@@ -236,12 +236,13 @@ namespace Inf_sys_geogr_
                 userStatistics.Assessment = ocenka;
                 userStatistics.traveltime = allpassage;
 
-                //context.UserStatistics.Add(userStatistics);
-               // context.SaveChanges();
+                context.UserStatistics.Add(userStatistics);
+                context.SaveChanges();
 
 
 
-                Statistics statistics = new Statistics(ListsTests);
+                Statistics statistics = new Statistics();
+                statistics.name = nameuser;
                 this.Hide();
                 statistics.Show();
                 

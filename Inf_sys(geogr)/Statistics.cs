@@ -12,19 +12,23 @@ namespace Inf_sys_geogr_
 {
     public partial class Statistics : Form
     {
-        ListsTests ListsTests;
-        public Statistics(ListsTests listsTests)
+        public string name;
+        
+        public Statistics()
         {
             InitializeComponent();
-            this.ListsTests = listsTests;
-           
+            
             
         }
 
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            // ListsTests.Show();
+            Main_user main_User = new Main_user();
+            main_User.name = name;
             this.Hide();
-            ListsTests.Show();
+            main_User.Show();
             
         }
 
@@ -41,10 +45,10 @@ namespace Inf_sys_geogr_
             
             foreach (UserStatistics userStatistics in context.UserStatistics)
             {
-                if (userStatistics.UserName == ListsTests.name)
+                if (userStatistics.UserName == name)
                 {
                     int rownumber = itogitesta.Rows.Add();
-                    MessageBox.Show(userStatistics.UserName);
+                   // MessageBox.Show(userStatistics.UserName);
                     itogitesta.Rows[rownumber].Cells[0].Value = userStatistics.Nomer;
                     itogitesta.Rows[rownumber].Cells[1].Value = userStatistics.UserName;
                     itogitesta.Rows[rownumber].Cells[2].Value = userStatistics.TestName;

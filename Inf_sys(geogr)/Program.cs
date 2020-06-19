@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace Inf_sys_geogr_
 {
-    static class Program
+    static class Program 
     {
+        public static ApplicationContext Context { get; set; }
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,8 @@ namespace Inf_sys_geogr_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_user());
+            Context = new ApplicationContext(new Form1());
+            Application.Run(Context);
         }
     }
 }

@@ -18,17 +18,18 @@ namespace Inf_sys_geogr_
         public string name;
         public string json;
         public int Selectedtest;
-        Main_user main_User;
-        public ListsTests(Main_user main_User)
+        public ListsTests()
         {
             InitializeComponent();
-            this.main_User = main_User;
+            
         }
 
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            main_User.Show();
+            Program.Context.MainForm = new Main_user();
+            this.Close();
+            Program.Context.MainForm.Show();
+            
         }
 
         private void bunifuFlatButton13_Click(object sender, EventArgs e)
@@ -40,50 +41,12 @@ namespace Inf_sys_geogr_
         {
             Test test = new Test();
           
-           // int count = test.setQuestions.Count;
-            //MessageBox.Show(count.ToString());
+
             
             Selectedtest = 3;
             FinalTests finalTests = new FinalTests(this);
             finalTests.nameuser = name;
 
-            
-
-            
-
-            
-
-
-            //SetQuestion setQuestion = new SetQuestion { question = "Что такое миграция", answer = new string[] { "Отъезд из страны", "Приезд в страну", "Любые переезды граждан", "Переезды внутри страны" } };
-            //test.setQuestions.Add(setQuestion);
-
-            //setQuestion = new SetQuestion();
-            //setQuestion.question = "Как называется отъезд за рубеж?";
-            //setQuestion.answer = new string[] { "Иммиграция", "Эмиграция", "Миграция", "Переселение" };
-
-            //test.setQuestions.Add(setQuestion);
-
-            //setQuestion = new SetQuestion();
-            //setQuestion.question = "Как называются миграции на постоянное место жительства?";
-            //setQuestion.answer = new string[] { "Переезд", "Безвозвратные", "Получение гражданства", "Получение вида на жительство" };
-
-            //test.setQuestions.Add(setQuestion);
-
-            //setQuestion = new SetQuestion();
-            //setQuestion.question = "Какая часть мигрантов учитывается при расчете миграционного прироста?";
-            //setQuestion.answer = new string[] { "Все количество", "Трудовые мигранты", "Прибывшие или выбывшие на постоянное место жительство", "Туристы" };
-
-            //test.setQuestions.Add(setQuestion);
-
-            //setQuestion = new SetQuestion();
-            //setQuestion.question = "Какие показатели учитываются при расчете прироста населения?";
-            //setQuestion.answer = new string[] { "Естественный прирост", "Рождаемость", "Количество иммигрантов", "Сумма естественного и миграционного прироста" };
-
-            //test.setQuestions.Add(setQuestion);
-
-            
-
-           
             this.Hide();
             finalTests.Show();
 
@@ -93,23 +56,6 @@ namespace Inf_sys_geogr_
         {
             Selectedtest = 4;
             FinalTests finalTests = new FinalTests(this);
-            
-
-            //SetQuestion setQuestion = new SetQuestion { question = "Что такое мигранты", answer = new string[] { "первое1", "второе2", "третье3" } };
-            //test.setQuestions.Add(setQuestion);
-
-            //setQuestion = new SetQuestion();
-            //setQuestion.question = "вопрос";
-            //setQuestion.answer = new string[] { "1", "2", "3" };
-
-            //test.setQuestions.Add(setQuestion);
-
-            //setQuestion = new SetQuestion();
-            //setQuestion.question = "вопрос2";
-            //setQuestion.answer = new string[] { "4", "5", "6" };
-
-            //test.setQuestions.Add(setQuestion);
-
             this.Hide();
             finalTests.Show();
 
